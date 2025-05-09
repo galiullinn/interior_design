@@ -19,6 +19,7 @@ class RegisterRequest(BaseModel):
                 'Пароли не совпадают.',
                 {'field': 'password_confirm'}
             )
+        return self
 
 
 class RegisterResponse(BaseModel):

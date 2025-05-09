@@ -1,10 +1,10 @@
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from models import User, Profile
-from schemas.auth import RegisterRequest
-from schemas.token import TokenResponse
-from services.security import hash_password, verify_password, create_access_token, create_refresh_token, verify_token
+from src.models import User, Profile
+from src.schemas.auth import RegisterRequest
+from src.schemas.token import TokenResponse
+from src.services.security import hash_password, verify_password, create_access_token, create_refresh_token, verify_token
 
 
 async def create_user_with_profile(user_data: RegisterRequest, db: AsyncSession) -> User | None:
