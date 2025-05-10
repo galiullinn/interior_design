@@ -50,7 +50,7 @@ async def get_project_endpoint(
     return project
 
 
-@router.patch("/{project_id}", response_model=ProjectResponse, summary="Обновить данные проекта")
+@router.patch("/{project_id}", response_model=ProjectResponse, summary="Обновить данные проекта пользователя")
 async def update_project_endpoint(
         project_id: int,
         update_data: ProjectUpdate,
